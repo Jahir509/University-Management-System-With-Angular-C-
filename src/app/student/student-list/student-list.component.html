@@ -1,0 +1,7 @@
+<app-single-student 
+    *ngFor = "let aStudent of students"
+    [student] = "aStudent"
+    (editFormDisplay) = "test($event)"
+    (selectStudent) = "deleteStudent($event)">
+</app-single-student> >
+

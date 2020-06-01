@@ -1,0 +1,15 @@
+<table class="table table-bordered">
+    <tr class="table-primary">
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th></th>
+    </tr>
+    <tr class="table-warning" *ngFor="let teacher of teachers">
+        <td>{{teacher.Name}}</td>
+        <td>{{teacher.Phone}}</td>
+        <td>{{teacher.Email}}</td>
+        <td><button class="btn btn-success" (click)="EditTeacher(teacher)"> Edit </button> || <button class="btn btn-danger" (click)="DeleteTeacher(teacher)">Delete</button></td>
+    </tr>
+</table>
+

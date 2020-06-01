@@ -1,0 +1,4 @@
+<button class="btn btn-danger" *ngIf=" CreateButtonVisible == true" (click)="CreateCourse()" style="margin: 2% 0;">Add new Course</button>
+<app-course-create *ngIf="CreateFormVisible == true"></app-course-create>
+<app-course-edit *ngIf="EditFormVisible == true"[course]="courseWasSelected" ></app-course-edit>
+<app-course-list *ngIf="CourseListVisible == true" (CourseSelected)="SelectedCourse($event)"></app-course-list>

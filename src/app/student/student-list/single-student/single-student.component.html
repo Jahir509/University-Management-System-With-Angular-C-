@@ -1,0 +1,21 @@
+<div class="col-md-12 col-xs-6">
+    <br>
+    <div class="card">
+        <div class="card-header bg-primary text-white">Contact information</div>
+        <div class="card-body">
+            <p><b>Student Name: </b>{{student.Name}}</p>
+            <p><b>Student RegNo: </b>{{student.RegNo}}</p>
+            <p><b>Student Email: </b>{{student.Email}}</p>
+            <p><b>Student Department: </b>{{student.Department.Code}}</p>
+            <p><b>Department ID: </b>{{student.Department.Id}}</p>
+            <p><b>Department Full Name: </b>{{student.Department.Name}}</p>
+
+        </div> 
+        <form>
+            <div class="card-footer">
+                <button class="btn btn-warning text-black" (click)="getStudent(student)">Update Information</button> || 
+                <button class="btn btn-danger text-white" (click)="deleteStudent(student)">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="row" style="overflow: hidden;">
+    <div class="col-md-6">
+        <app-student-edit *ngIf="isEditable === true" [student] = "testData" (closeEditForm) = "closeEditForm($event)"></app-student-edit>
+        <app-student-create *ngIf="isEditable !== true"></app-student-create>
+    </div>
+    <div class="col-md-6">
+        <app-student-list (selectedStudent) = "studentWasSelected($event)"></app-student-list>
+    </div>
+</div>

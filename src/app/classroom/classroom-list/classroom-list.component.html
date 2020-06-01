@@ -1,0 +1,10 @@
+<button class="btn btn-primary pull-right" (click)="CreateFormOpen()">Add new</button>
+<app-classroom-create *ngIf="IsFormOpen==true"></app-classroom-create>
+<div class="row">
+    <app-single-classroom 
+    *ngFor="let aClassroom of classrooms"
+    [classroom]="aClassroom"
+    class="col-md-4"
+    (classroomSelected) = "RoomSelected($event)">
+    </app-single-classroom>
+</div>

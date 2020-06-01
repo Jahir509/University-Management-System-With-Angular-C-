@@ -1,0 +1,5 @@
+
+<button  *ngIf="createButton == true"class="btn btn-danger" style="margin: 2% 0;" (click)="CreateFormOpen()">Add new Teacher</button>
+<app-teacher-create *ngIf="createNew == true" (closeForm)="closeCreateForm()"></app-teacher-create>
+<app-teacher-list *ngIf="showTeacherList == true" (teacherIsSelected)= "teacherSelected($event)"></app-teacher-list>
+<app-teacher-edit *ngIf="editForm == true" [teacher] = "selectedTeacher" (closeEditForm) = "closeEditForm()" ></app-teacher-edit>

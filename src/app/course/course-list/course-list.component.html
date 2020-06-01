@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+    <tr  class="table-primary">
+        <th>Code</th>
+        <th>Name</th>
+        <th>Credit</th>
+        <th>Semester</th>
+        <th>Department</th>
+        <th></th>
+    </tr>
+    <tr  class="table-warning" *ngFor="let course of courses" >
+        <td>{{course.Code}}</td>
+        <td>{{course.Description}}</td>
+        <td>{{course.Credit}}</td>
+        <td>{{course.Semester}}</td>
+        <td>{{course.Department.Code}}</td>
+        <td>
+            <button class="btn btn-warning" (click)="EditCourse(course)">Edit</button> || 
+            <button class="btn btn-danger" (click)="DeleteCourse(course)">Delete</button>
+        </td>
+    </tr>
+</table>
